@@ -6,8 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#f4f6f8}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+}
 
 /* HEADER */
 header{
@@ -18,16 +26,23 @@ header{
     justify-content:space-between;
     align-items:center;
 }
-header h1{font-size:22px}
+
+header h1{
+    font-size:22px;
+}
+
 nav a{
     color:#fff;
-    margin:0 12px;
+    margin:0 10px;
     text-decoration:none;
     font-weight:bold;
 }
-nav a:hover{text-decoration:underline}
 
-/* HERO / COVER */
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* HERO */
 .hero{
     background:url('https://images.unsplash.com/photo-1509062522246-3755977927d7') center/cover no-repeat;
     height:360px;
@@ -35,6 +50,7 @@ nav a:hover{text-decoration:underline}
     align-items:center;
     justify-content:center;
 }
+
 .hero div{
     background:rgba(0,0,0,0.6);
     color:#fff;
@@ -42,27 +58,33 @@ nav a:hover{text-decoration:underline}
     border-radius:10px;
     text-align:center;
 }
-.hero h2{font-size:32px}
 
-/* SECTION */
+.hero h2{
+    font-size:32px;
+}
+
+/* SECTIONS */
 .section{
     padding:40px 30px;
     max-width:1100px;
     margin:auto;
 }
+
 .section h2{
     color:#003366;
     margin-bottom:20px;
     border-bottom:3px solid #003366;
     display:inline-block;
+    padding-bottom:5px;
 }
 
 /* CARDS */
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
     gap:20px;
 }
+
 .card{
     background:#fff;
     padding:20px;
@@ -78,7 +100,6 @@ nav a:hover{text-decoration:underline}
     border-radius:10px;
     text-align:center;
 }
-.admission h3{margin-bottom:10px}
 
 /* GALLERY */
 .gallery img{
@@ -86,6 +107,13 @@ nav a:hover{text-decoration:underline}
     max-width:600px;
     display:block;
     margin:auto;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+/* CULTURE SLIDER */
+.culture-img{
+    width:100%;
     border-radius:8px;
     box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
@@ -104,83 +132,111 @@ footer{
 <body>
 
 <header>
-<h1>Roshan Tara Secondary School</h1>
-<nav>
-<a href="#home">Home</a>
-<a href="#principal">Principal</a>
-<a href="#admission">Admissions</a>
-<a href="#events">Events</a>
-<a href="#gallery">Gallery</a>
-</nav>
+    <h1>Roshan Tara Secondary School</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#principal">Principal</a>
+        <a href="#admission">Admissions</a>
+        <a href="#events">Events</a>
+        <a href="#culture">Culture Day</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
 </header>
 
-<!-- COVER PAGE -->
+<!-- COVER -->
 <section class="hero" id="home">
-<div>
-<h2>Roshan Tara Secondary School</h2>
-<p>Sachal Goth, Karachi</p>
-</div>
+    <div>
+        <h2>Roshan Tara Secondary School</h2>
+        <p>Sachal Goth, Karachi</p>
+    </div>
 </section>
 
 <!-- PRINCIPAL MESSAGE -->
 <section class="section" id="principal">
-<h2>Principal's Message</h2>
-<div class="card">
-<p>
-Welcome to Roshan Tara Secondary School. Our aim is to nurture students
-with strong moral values, discipline, and academic excellence.
-We believe in modern education combined with character building
-to prepare our students for future challenges.
-</p>
-</div>
+    <h2>Principal's Message</h2>
+    <div class="card">
+        <p>
+        Welcome to Roshan Tara Secondary School. Our mission is to provide
+        quality education with strong moral values, discipline, and modern
+        learning skills to prepare our students for a bright future.
+        </p>
+    </div>
 </section>
 
-<!-- ADMISSIONS 2026 -->
+<!-- ADMISSIONS -->
 <section class="section" id="admission">
-<h2>Admissions Open 2026</h2>
-<div class="admission">
-<h3>Now Accepting Admissions for Academic Year 2026</h3>
-<p>
-Admissions are open for Playgroup to Secondary Classes.
-Parents are requested to visit the school campus for registration,
-details, and admission test information.
-</p>
-<p><strong>Location:</strong> Sachal Goth, Karachi</p>
-<p><strong>Contact:</strong> 03XX-XXXXXXX</p>
-</div>
+    <h2>Admissions Open 2026</h2>
+    <div class="admission">
+        <h3>Admissions Now Open</h3>
+        <p>
+        Admissions are open for Playgroup to Secondary Classes for the
+        academic year 2026. Parents are requested to visit the school
+        campus for further details.
+        </p>
+        <p><strong>Location:</strong> Sachal Goth, Karachi</p>
+        <p><strong>Contact:</strong> 03XX-XXXXXXX</p>
+    </div>
 </section>
 
 <!-- EVENTS -->
 <section class="section" id="events">
-<h2>Events Organized</h2>
-<div class="cards">
-<div class="card">
-<h3>Artificial Intelligence Awareness Program</h3>
-<p>
-An awareness session was organized to introduce students to
-Artificial Intelligence, its importance, and future career scope.
-</p>
-</div>
-<div class="card">
-<h3>Teachers Training Program</h3>
-<p>
-Training workshops were conducted to improve teaching methodologies
-and classroom management skills.
-</p>
-</div>
-</div>
+    <h2>Events Organized</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Artificial Intelligence Awareness Program</h3>
+            <p>
+            An awareness session was organized to introduce students to
+            Artificial Intelligence and its future importance.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Teachers Training Program</h3>
+            <p>
+            Professional training workshops were conducted for teachers
+            to improve teaching methodologies.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- SINDHI CULTURE DAY -->
+<section class="section" id="culture">
+    <h2>Sindhi Culture Day – December 2025</h2>
+    <div class="cards">
+        <div class="card">
+            <p>
+            Roshan Tara Secondary School celebrated Sindhi Culture Day in
+            December 2025 to promote Sindh’s rich traditions, language,
+            and cultural heritage. Students and teachers actively
+            participated by wearing traditional Sindhi attire.
+            </p>
+        </div>
+        <div class="card">
+            <img id="cultureSlide" src="1.jpg" class="culture-img" alt="Sindhi Culture Day">
+        </div>
+    </div>
 </section>
 
 <!-- GALLERY -->
 <section class="section gallery" id="gallery">
-<h2>School Gallery</h2>
-<img src="principal.jpg" alt="Roshan Tara Secondary School">
+    <h2>School Gallery</h2>
+    <img src="principal.jpg" alt="School Principal">
 </section>
 
 <footer>
-<p>&copy; 2026 Roshan Tara Secondary School</p>
-<p>Sachal Goth, Karachi</p>
+    <p>&copy; 2026 Roshan Tara Secondary School</p>
+    <p>Sachal Goth, Karachi</p>
 </footer>
+
+<script>
+let cultureImages = ["1.jpg", "3.jpg", "4.jpg"];
+let index = 0;
+
+setInterval(() => {
+    index = (index + 1) % cultureImages.length;
+    document.getElementById("cultureSlide").src = cultureImages[index];
+}, 2000);
+</script>
 
 </body>
 </html>
