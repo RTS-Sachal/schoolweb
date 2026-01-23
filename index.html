@@ -27,9 +27,9 @@ nav a{
 }
 nav a:hover{text-decoration:underline}
 
-/* HERO */
+/* HERO / COVER */
 .hero{
-    background:url('principal.jpg') center/cover no-repeat;
+    background:url('https://images.unsplash.com/photo-1509062522246-3755977927d7') center/cover no-repeat;
     height:360px;
     display:flex;
     align-items:center;
@@ -70,9 +70,22 @@ nav a:hover{text-decoration:underline}
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
+/* ADMISSION */
+.admission{
+    background:#003366;
+    color:#fff;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+}
+.admission h3{margin-bottom:10px}
+
 /* GALLERY */
 .gallery img{
     width:100%;
+    max-width:600px;
+    display:block;
+    margin:auto;
     border-radius:8px;
     box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
@@ -95,12 +108,13 @@ footer{
 <nav>
 <a href="#home">Home</a>
 <a href="#principal">Principal</a>
+<a href="#admission">Admissions</a>
 <a href="#events">Events</a>
 <a href="#gallery">Gallery</a>
 </nav>
 </header>
 
-<!-- COVER -->
+<!-- COVER PAGE -->
 <section class="hero" id="home">
 <div>
 <h2>Roshan Tara Secondary School</h2>
@@ -113,11 +127,26 @@ footer{
 <h2>Principal's Message</h2>
 <div class="card">
 <p>
-Welcome to Roshan Tara Secondary School. Our mission is to provide
-quality education with strong moral values, discipline, and modern
-learning approaches. We prepare our students for a bright future
-through dedication and excellence.
+Welcome to Roshan Tara Secondary School. Our aim is to nurture students
+with strong moral values, discipline, and academic excellence.
+We believe in modern education combined with character building
+to prepare our students for future challenges.
 </p>
+</div>
+</section>
+
+<!-- ADMISSIONS 2026 -->
+<section class="section" id="admission">
+<h2>Admissions Open 2026</h2>
+<div class="admission">
+<h3>Now Accepting Admissions for Academic Year 2026</h3>
+<p>
+Admissions are open for Playgroup to Secondary Classes.
+Parents are requested to visit the school campus for registration,
+details, and admission test information.
+</p>
+<p><strong>Location:</strong> Sachal Goth, Karachi</p>
+<p><strong>Contact:</strong> 03XX-XXXXXXX</p>
 </div>
 </section>
 
@@ -128,15 +157,15 @@ through dedication and excellence.
 <div class="card">
 <h3>Artificial Intelligence Awareness Program</h3>
 <p>
-An informative session was conducted to introduce students to
-Artificial Intelligence, its applications, and future scope.
+An awareness session was organized to introduce students to
+Artificial Intelligence, its importance, and future career scope.
 </p>
 </div>
 <div class="card">
 <h3>Teachers Training Program</h3>
 <p>
-Professional development workshops were organized to enhance
-teaching skills and modern classroom methodologies.
+Training workshops were conducted to improve teaching methodologies
+and classroom management skills.
 </p>
 </div>
 </div>
