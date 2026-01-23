@@ -4,61 +4,154 @@
 <meta charset="UTF-8">
 <title>Roshan Tara Secondary School | Sachal Goth Karachi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
-body{background:#f4f6f8;}
-header{background:#003366;color:#fff;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;}
-header h1{font-size:22px;}
-nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:bold;}
-nav a:hover{text-decoration:underline;}
-.hero{background:url('https://images.unsplash.com/photo-1580582932707-520aed937b7b') center/cover;height:320px;display:flex;align-items:center;justify-content:center;}
-.hero div{background:rgba(0,0,0,0.6);color:#fff;padding:30px;border-radius:10px;text-align:center;}
-.section{padding:40px 30px;max-width:1100px;margin:auto;}
-.section h2{color:#003366;margin-bottom:20px;border-bottom:3px solid #003366;display:inline-block;padding-bottom:5px;}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.1);}
-footer{background:#111;color:#fff;text-align:center;padding:20px;margin-top:40px;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f4f6f8}
+
+/* HEADER */
+header{
+    background:#003366;
+    color:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+header h1{font-size:22px}
+nav a{
+    color:#fff;
+    margin:0 12px;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav a:hover{text-decoration:underline}
+
+/* HERO */
+.hero{
+    background:url('principal.jpg') center/cover no-repeat;
+    height:360px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.hero div{
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+}
+.hero h2{font-size:32px}
+
+/* SECTION */
+.section{
+    padding:40px 30px;
+    max-width:1100px;
+    margin:auto;
+}
+.section h2{
+    color:#003366;
+    margin-bottom:20px;
+    border-bottom:3px solid #003366;
+    display:inline-block;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
+.gallery img{
+    width:100%;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
 </style>
 </head>
+
 <body>
+
 <header>
 <h1>Roshan Tara Secondary School</h1>
 <nav>
 <a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#academics">Academics</a>
-<a href="#contact">Contact</a>
+<a href="#principal">Principal</a>
+<a href="#events">Events</a>
+<a href="#gallery">Gallery</a>
 </nav>
 </header>
 
+<!-- COVER -->
 <section class="hero" id="home">
 <div>
-<h2>Welcome to Roshan Tara Secondary School</h2>
+<h2>Roshan Tara Secondary School</h2>
 <p>Sachal Goth, Karachi</p>
 </div>
 </section>
 
-<section class="section" id="about">
-<h2>About Us</h2>
-<p>Roshan Tara Secondary School provides quality education with discipline, morals and academic excellence.</p>
-</section>
-
-<section class="section" id="academics">
-<h2>Academics</h2>
-<div class="cards">
-<div class="card"><h3>Primary Section</h3><p>Strong foundation learning.</p></div>
-<div class="card"><h3>Secondary Section</h3><p>Board oriented education.</p></div>
-<div class="card"><h3>Computer Education</h3><p>Modern computer lab.</p></div>
+<!-- PRINCIPAL MESSAGE -->
+<section class="section" id="principal">
+<h2>Principal's Message</h2>
+<div class="card">
+<p>
+Welcome to Roshan Tara Secondary School. Our mission is to provide
+quality education with strong moral values, discipline, and modern
+learning approaches. We prepare our students for a bright future
+through dedication and excellence.
+</p>
 </div>
 </section>
 
-<section class="section" id="contact">
-<h2>Contact</h2>
-<p>Sachal Goth, Karachi<br>Phone: 03XX-XXXXXXX</p>
+<!-- EVENTS -->
+<section class="section" id="events">
+<h2>Events Organized</h2>
+<div class="cards">
+<div class="card">
+<h3>Artificial Intelligence Awareness Program</h3>
+<p>
+An informative session was conducted to introduce students to
+Artificial Intelligence, its applications, and future scope.
+</p>
+</div>
+<div class="card">
+<h3>Teachers Training Program</h3>
+<p>
+Professional development workshops were organized to enhance
+teaching skills and modern classroom methodologies.
+</p>
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery" id="gallery">
+<h2>School Gallery</h2>
+<img src="principal.jpg" alt="Roshan Tara Secondary School">
 </section>
 
 <footer>
 <p>&copy; 2026 Roshan Tara Secondary School</p>
+<p>Sachal Goth, Karachi</p>
 </footer>
+
 </body>
 </html>
