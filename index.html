@@ -85,7 +85,7 @@ nav a:hover{text-decoration:underline}
     text-align:center;
 }
 
-/* AI SESSION COVER */
+/* EVENT COVERS */
 .ai-cover{
     background:url('https://images.unsplash.com/photo-1677442136019-21780ecad995') center/cover no-repeat;
     height:220px;
@@ -96,10 +96,21 @@ nav a:hover{text-decoration:underline}
     color:#fff;
     margin-bottom:15px;
 }
-.ai-cover h3{
+.ttc-cover{
+    background:url('ttc.jpg') center/cover no-repeat;
+    height:220px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    margin-bottom:15px;
+}
+.event-title{
     background:rgba(0,0,0,0.6);
     padding:15px 25px;
     border-radius:8px;
+    text-align:center;
 }
 
 /* SLIDERS */
@@ -173,24 +184,33 @@ for registration and details.
 <section class="section" id="events">
 <h2>Events Organized</h2>
 
+<!-- AI SESSION -->
 <div class="ai-cover">
+<div class="event-title">
 <h3>Artificial Intelligence Awareness Session</h3>
 </div>
-
-<div class="cards">
+</div>
 <div class="card">
 <p>
 An Artificial Intelligence awareness session was organized to introduce
 students to modern technology, AI concepts, and future career opportunities.
 </p>
 </div>
-<div class="card">
+
+<br>
+
+<!-- TEACHERS TRAINING -->
+<div class="ttc-cover">
+<div class="event-title">
 <h3>Teachers Training Program</h3>
-<p>
-Professional development workshops were conducted to enhance teaching
-skills and modern classroom methodologies.
-</p>
 </div>
+</div>
+<div class="card">
+<p>
+A Teachers Training Program was conducted to enhance professional skills,
+modern teaching methodologies, classroom management, and effective learning
+strategies for quality education.
+</p>
 </div>
 </section>
 
