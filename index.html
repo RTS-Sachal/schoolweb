@@ -58,7 +58,7 @@ nav a:hover::after{
     width:100%;
 }
 
-/* HERO (DYNAMIC COVER) */
+/* HERO */
 .hero{
     height:440px;
     background-size:cover;
@@ -263,7 +263,7 @@ and cultural heritage.
 <section class="section" id="gallery">
 <h2>School Gallery</h2>
 <div class="card">
-<img id="gallerySlide" src="principal.jpg" class="slider-img">
+<img id="gallerySlide" src="a.jpeg" class="slider-img">
 </div>
 </section>
 
@@ -273,12 +273,12 @@ and cultural heritage.
 </footer>
 
 <script>
-/* HERO COVER SLIDER (SCHOOL IMAGES) */
+/* HERO COVER SLIDER */
 let heroImages=[
-"a.jpeg",
-"b.jpeg",
-"d.jpeg",
-"school2.jpeg"
+    "a.jpeg",
+    "b.jpeg",
+    "d.jpeg",
+    "school2.jpeg"
 ];
 let h=0;
 const hero=document.querySelector(".hero");
@@ -296,8 +296,18 @@ setInterval(()=>{
     document.getElementById("cultureSlide").src=cultureImages[c];
 },3000);
 
-/* GALLERY SLIDER */
-let galleryImages=["principal.jpg","6~2.jpg","7~2.jpg","1.jpg","3.jpg"];
+/* GALLERY SLIDER (SAME SCHOOL IMAGES + OTHERS) */
+let galleryImages=[
+    "a.jpeg",
+    "b.jpeg",
+    "d.jpeg",
+    "school2.jpeg",
+    "principal.jpg",
+    "6~2.jpg",
+    "7~2.jpg",
+    "1.jpg",
+    "3.jpg"
+];
 let g=0;
 setInterval(()=>{
     g=(g+1)%galleryImages.length;
