@@ -8,97 +8,165 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 html{scroll-behavior:smooth}
-body{background:#f4f7fb;color:#333}
+body{
+    background:#f4f7fb;
+    color:#333;
+}
 
 /* HEADER */
 header{
-background:linear-gradient(135deg,#004aad,#00b4d8);
-color:#fff;padding:18px 40px;
-display:flex;justify-content:space-between;align-items:center;
-position:sticky;top:0;z-index:1000;
-box-shadow:0 5px 15px rgba(0,0,0,.2)
+    background:linear-gradient(135deg,#004aad,#00b4d8);
+    color:#fff;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
-header h1{font-size:24px;font-weight:700}
+header h1{
+    font-size:24px;
+    font-weight:700;
+}
 nav a{
-color:#fff;margin:0 12px;text-decoration:none;font-weight:500;position:relative
+    color:#fff;
+    margin:0 12px;
+    text-decoration:none;
+    font-weight:500;
+    position:relative;
 }
 nav a::after{
-content:"";position:absolute;width:0;height:2px;background:#fff;
-left:0;bottom:-6px;transition:.3s
+    content:"";
+    position:absolute;
+    width:0;
+    height:2px;
+    background:#fff;
+    left:0;
+    bottom:-6px;
+    transition:.3s;
 }
-nav a:hover::after{width:100%}
+nav a:hover::after{
+    width:100%;
+}
 
-/* HERO SLIDER */
+/* HERO (DYNAMIC COVER) */
 .hero{
-height:440px;
-background-size:cover;
-background-position:center;
-display:flex;align-items:center;justify-content:center;
-transition:background-image 1s ease-in-out;
+    height:440px;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:background-image 1s ease-in-out;
 }
 .hero-box{
-background:rgba(0,0,0,.65);
-color:#fff;padding:45px;border-radius:20px;text-align:center;
-animation:fadeUp 1.2s ease
+    background:rgba(0,0,0,0.65);
+    color:#fff;
+    padding:45px;
+    border-radius:20px;
+    text-align:center;
+    animation:fadeUp 1.2s ease;
 }
 .hero-box h2{font-size:40px}
 .hero-box p{font-size:18px;margin-top:8px}
 
 @keyframes fadeUp{
-from{opacity:0;transform:translateY(40px)}
-to{opacity:1;transform:translateY(0)}
+    from{opacity:0;transform:translateY(40px)}
+    to{opacity:1;transform:translateY(0)}
 }
 
 /* SECTIONS */
-.section{padding:65px 30px;max-width:1200px;margin:auto}
+.section{
+    padding:65px 30px;
+    max-width:1200px;
+    margin:auto;
+}
 .section h2{
-font-size:30px;color:#004aad;margin-bottom:30px
+    font-size:30px;
+    color:#004aad;
+    margin-bottom:30px;
 }
 .section h2::after{
-content:"";width:70px;height:4px;background:#00b4d8;
-display:block;margin-top:8px;border-radius:10px
+    content:"";
+    width:70px;
+    height:4px;
+    background:#00b4d8;
+    display:block;
+    margin-top:8px;
+    border-radius:10px;
 }
 
 /* CARD */
 .card{
-background:#fff;padding:30px;border-radius:20px;
-box-shadow:0 12px 25px rgba(0,0,0,.1);
-transition:.3s
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 12px 25px rgba(0,0,0,0.1);
+    transition:.3s;
 }
-.card:hover{transform:translateY(-8px)}
+.card:hover{
+    transform:translateY(-8px);
+}
 
 /* ADMISSION */
 .admission{
-background:linear-gradient(135deg,#00b4d8,#48cae4);
-color:#fff;padding:40px;border-radius:25px;text-align:center
+    background:linear-gradient(135deg,#00b4d8,#48cae4);
+    color:#fff;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
 }
-.admission h3{font-size:26px;margin-bottom:15px}
+.admission h3{
+    font-size:26px;
+    margin-bottom:15px;
+}
 
 /* EVENTS */
 .event-cover{
-height:240px;border-radius:20px;
-display:flex;align-items:center;justify-content:center;margin-bottom:18px
+    height:240px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:18px;
 }
-.ai{background:url('https://images.unsplash.com/photo-1677442136019-21780ecad995') center/cover}
-.ttc{background:url('ttc.jpg') center/cover}
+.ai{
+    background:url('https://images.unsplash.com/photo-1677442136019-21780ecad995') center/cover;
+}
+.ttc{
+    background:url('ttc.jpg') center/cover;
+}
 .event-title{
-background:rgba(0,0,0,.65);
-padding:18px 30px;border-radius:15px;color:#fff
+    background:rgba(0,0,0,0.65);
+    padding:18px 30px;
+    border-radius:15px;
+    color:#fff;
+    text-align:center;
 }
 
 /* SLIDER IMAGE */
 .slider-img{
-width:100%;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.2)
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* FOOTER */
 footer{
-background:#0b132b;color:#fff;
-text-align:center;padding:30px;margin-top:70px
+    background:#0b132b;
+    color:#fff;
+    text-align:center;
+    padding:30px;
+    margin-top:70px;
 }
 </style>
 </head>
@@ -117,7 +185,7 @@ text-align:center;padding:30px;margin-top:70px
 </nav>
 </header>
 
-<!-- HERO WITH CHANGING COVER IMAGES -->
+<!-- HERO -->
 <section class="hero" id="home">
 <div class="hero-box">
 <h2>Roshan Tara Secondary School</h2>
@@ -125,7 +193,7 @@ text-align:center;padding:30px;margin-top:70px
 </div>
 </section>
 
-<!-- PRINCIPAL -->
+<!-- PRINCIPAL MESSAGE -->
 <section class="section" id="principal">
 <h2>Principal's Message</h2>
 <div class="card">
@@ -137,12 +205,12 @@ prepare our students for future success.
 </div>
 </section>
 
-<!-- ADMISSION -->
+<!-- ADMISSIONS -->
 <section class="section" id="admission">
 <h2>Admissions Open 2026</h2>
 <div class="admission">
 <h3>Enroll Your Child Today</h3>
-<p>Playgroup to Secondary Classes</p>
+<p>Admissions are open from Playgroup to Secondary Classes.</p>
 <p><strong>Location:</strong> Sachal Goth, Karachi</p>
 <p><strong>Contact:</strong> 03XX-XXXXXXX</p>
 </div>
@@ -153,19 +221,29 @@ prepare our students for future success.
 <h2>School Events</h2>
 
 <div class="event-cover ai">
-<div class="event-title"><h3>AI Awareness Session</h3></div>
+<div class="event-title">
+<h3>Artificial Intelligence Awareness Session</h3>
+</div>
 </div>
 <div class="card">
-<p>Students were introduced to Artificial Intelligence and future technologies.</p>
+<p>
+An AI awareness session was organized to introduce students to modern
+technology and future career opportunities.
+</p>
 </div>
 
 <br>
 
 <div class="event-cover ttc">
-<div class="event-title"><h3>Teachers Training Program</h3></div>
+<div class="event-title">
+<h3>Teachers Training Program</h3>
+</div>
 </div>
 <div class="card">
-<p>Teachers were trained in modern teaching techniques.</p>
+<p>
+A professional training program was conducted to enhance teaching skills
+and classroom management strategies.
+</p>
 </div>
 </section>
 
@@ -175,12 +253,13 @@ prepare our students for future success.
 <div class="card">
 <img id="cultureSlide" src="1.jpg" class="slider-img">
 <p style="margin-top:15px">
-Sindhi Culture Day was celebrated to promote Sindh’s traditions and heritage.
+Sindhi Culture Day was celebrated to promote Sindh’s traditions, language,
+and cultural heritage.
 </p>
 </div>
 </section>
 
-<!-- GALLERY (AUTO CHANGING SINGLE IMAGE) -->
+<!-- GALLERY -->
 <section class="section" id="gallery">
 <h2>School Gallery</h2>
 <div class="card">
@@ -194,34 +273,35 @@ Sindhi Culture Day was celebrated to promote Sindh’s traditions and heritage.
 </footer>
 
 <script>
-/* HERO COVER SLIDER */
+/* HERO COVER SLIDER (SCHOOL IMAGES) */
 let heroImages=[
-"https://images.unsplash.com/photo-1509062522246-3755977927d7",
-"https://images.unsplash.com/photo-1588072432836-e10032774350",
-"https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
+"a.jpeg",
+"b.jpeg",
+"d.jpeg",
+"school2.jpeg"
 ];
 let h=0;
 const hero=document.querySelector(".hero");
 hero.style.backgroundImage=`url(${heroImages[0]})`;
 setInterval(()=>{
-h=(h+1)%heroImages.length;
-hero.style.backgroundImage=`url(${heroImages[h]})`;
+    h=(h+1)%heroImages.length;
+    hero.style.backgroundImage=`url(${heroImages[h]})`;
 },3000);
 
 /* CULTURE SLIDER */
-let cultureImgs=["1.jpg","3.jpg","4.jpg"];
+let cultureImages=["1.jpg","3.jpg","4.jpg"];
 let c=0;
 setInterval(()=>{
-c=(c+1)%cultureImgs.length;
-document.getElementById("cultureSlide").src=cultureImgs[c];
+    c=(c+1)%cultureImages.length;
+    document.getElementById("cultureSlide").src=cultureImages[c];
 },3000);
 
 /* GALLERY SLIDER */
-let galleryImgs=["principal.jpg","6~2.jpg","7~2.jpg","1.jpg","3.jpg"];
+let galleryImages=["principal.jpg","6~2.jpg","7~2.jpg","1.jpg","3.jpg"];
 let g=0;
 setInterval(()=>{
-g=(g+1)%galleryImgs.length;
-document.getElementById("gallerySlide").src=galleryImgs[g];
+    g=(g+1)%galleryImages.length;
+    document.getElementById("gallerySlide").src=galleryImages[g];
 },3000);
 </script>
 
