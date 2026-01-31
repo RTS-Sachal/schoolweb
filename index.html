@@ -8,182 +8,191 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+:root{
+  --primary:#0b3c5d;
+  --secondary:#1d70b8;
+  --accent:#f4b41a;
+  --light:#f5f7fa;
+  --dark:#0b132b;
 }
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
 html{scroll-behavior:smooth}
-body{
-    background:#f4f7fb;
-    color:#333;
+body{background:var(--light);color:#333}
+
+/* TOP BAR */
+.topbar{
+  background:var(--dark);
+  color:#fff;
+  padding:8px 40px;
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
 }
 
 /* HEADER */
 header{
-    background:linear-gradient(135deg,#004aad,#00b4d8);
-    color:#fff;
-    padding:18px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  background:#fff;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
 }
-header h1{
-    font-size:24px;
-    font-weight:700;
-}
+header h1{color:var(--primary);font-size:24px}
 nav a{
-    color:#fff;
-    margin:0 12px;
-    text-decoration:none;
-    font-weight:500;
-    position:relative;
+  margin:0 14px;
+  text-decoration:none;
+  color:var(--primary);
+  font-weight:500;
 }
-nav a::after{
-    content:"";
-    position:absolute;
-    width:0;
-    height:2px;
-    background:#fff;
-    left:0;
-    bottom:-6px;
-    transition:.3s;
-}
-nav a:hover::after{
-    width:100%;
+nav a:hover{color:var(--secondary)}
+
+/* NOTICE STRIP */
+.notice-strip{
+  background:var(--accent);
+  padding:10px 40px;
+  font-weight:600;
 }
 
 /* HERO */
 .hero{
-    height:440px;
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:background-image 1s ease-in-out;
+  height:460px;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background-image 1s ease-in-out;
 }
 .hero-box{
-    background:rgba(0,0,0,0.65);
-    color:#fff;
-    padding:45px;
-    border-radius:20px;
-    text-align:center;
-    animation:fadeUp 1.2s ease;
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  padding:50px;
+  border-radius:16px;
+  text-align:center;
 }
 .hero-box h2{font-size:40px}
-.hero-box p{font-size:18px;margin-top:8px}
 
-@keyframes fadeUp{
-    from{opacity:0;transform:translateY(40px)}
-    to{opacity:1;transform:translateY(0)}
-}
-
-/* SECTIONS */
+/* SECTION */
 .section{
-    padding:65px 30px;
-    max-width:1200px;
-    margin:auto;
+  max-width:1200px;
+  margin:auto;
+  padding:70px 30px;
 }
 .section h2{
-    font-size:30px;
-    color:#004aad;
-    margin-bottom:30px;
-}
-.section h2::after{
-    content:"";
-    width:70px;
-    height:4px;
-    background:#00b4d8;
-    display:block;
-    margin-top:8px;
-    border-radius:10px;
+  color:var(--primary);
+  font-size:30px;
+  margin-bottom:35px;
+  border-left:6px solid var(--accent);
+  padding-left:15px;
 }
 
-/* CARD */
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
 .card{
-    background:#fff;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 12px 25px rgba(0,0,0,0.1);
-    transition:.3s;
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
-.card:hover{
-    transform:translateY(-8px);
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
 }
+.stat{
+  background:var(--secondary);
+  color:#fff;
+  padding:35px;
+  border-radius:18px;
+  text-align:center;
+}
+.stat h3{font-size:36px;color:var(--accent)}
 
 /* ADMISSION */
 .admission{
-    background:linear-gradient(135deg,#00b4d8,#48cae4);
-    color:#fff;
-    padding:40px;
-    border-radius:25px;
-    text-align:center;
-}
-.admission h3{
-    font-size:26px;
-    margin-bottom:15px;
+  background:linear-gradient(135deg,var(--secondary),var(--primary));
+  color:#fff;
+  padding:45px;
+  border-radius:25px;
+  text-align:center;
 }
 
 /* EVENTS */
 .event-cover{
-    height:240px;
-    border-radius:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:18px;
+  height:240px;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:20px;
 }
-.ai{
-    background:url('https://images.unsplash.com/photo-1677442136019-21780ecad995') center/cover;
-}
-.ttc{
-    background:url('ttc.jpg') center/cover;
-}
+.ai{background:url('https://images.unsplash.com/photo-1677442136019-21780ecad995') center/cover}
+.ttc{background:url('ttc.jpg') center/cover}
 .event-title{
-    background:rgba(0,0,0,0.65);
-    padding:18px 30px;
-    border-radius:15px;
-    color:#fff;
-    text-align:center;
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  padding:18px 28px;
+  border-radius:14px;
 }
 
 /* SLIDER IMAGE */
 .slider-img{
-    width:100%;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  width:100%;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 /* FOOTER */
 footer{
-    background:#0b132b;
-    color:#fff;
-    text-align:center;
-    padding:30px;
-    margin-top:70px;
+  background:var(--dark);
+  color:#fff;
+  padding:40px;
+  text-align:center;
 }
 </style>
 </head>
 
 <body>
 
+<div class="topbar">
+  <div>📍 Sachal Goth, Karachi</div>
+  <div>📞 03XX-XXXXXXX</div>
+</div>
+
 <header>
 <h1>Roshan Tara Secondary School</h1>
 <nav>
 <a href="#home">Home</a>
-<a href="#principal">Principal</a>
+<a href="#academics">Academics</a>
+<a href="#studentlife">Student Life</a>
+<a href="#alumni">Alumni</a>
 <a href="#admission">Admissions</a>
 <a href="#events">Events</a>
 <a href="#culture">Culture</a>
 <a href="#gallery">Gallery</a>
 </nav>
 </header>
+
+<div class="notice-strip">
+📢 Admissions Open for Academic Session 2026
+</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -193,26 +202,53 @@ footer{
 </div>
 </section>
 
-<!-- PRINCIPAL MESSAGE -->
-<section class="section" id="principal">
-<h2>Principal's Message</h2>
-<div class="card">
-<p>
-Welcome to Roshan Tara Secondary School. Our mission is to provide quality
-education with discipline, moral values, and modern learning skills to
-prepare our students for future success.
-</p>
+<!-- ACADEMICS -->
+<section class="section" id="academics">
+<h2>Academics</h2>
+<div class="cards">
+<div class="card"><h3>📘 Strong Curriculum</h3><p>Concept-based education following national standards.</p></div>
+<div class="card"><h3>👩‍🏫 Qualified Faculty</h3><p>Experienced teachers using modern teaching methods.</p></div>
+<div class="card"><h3>🧠 Skill Development</h3><p>Critical thinking and problem-solving skills.</p></div>
 </div>
 </section>
 
-<!-- ADMISSIONS -->
+<!-- STUDENT LIFE -->
+<section class="section" id="studentlife">
+<h2>Student Life</h2>
+<div class="cards">
+<div class="card"><h3>🎒 Discipline & Values</h3><p>Moral values, respect, and responsibility.</p></div>
+<div class="card"><h3>🏫 Activities</h3><p>Events, competitions, and co-curricular activities.</p></div>
+<div class="card"><h3>🌟 Confidence</h3><p>Leadership and communication skills.</p></div>
+</div>
+</section>
+
+<!-- ALUMNI -->
+<section class="section" id="alumni">
+<h2>Alumni</h2>
+<div class="cards">
+<div class="card"><h3>🎓 Proud Graduates</h3><p>Successful former students.</p></div>
+<div class="card"><h3>🌍 Achievements</h3><p>Positive contributions to society.</p></div>
+<div class="card"><h3>🤝 Connection</h3><p>Lifelong bond with the school.</p></div>
+</div>
+</section>
+
+<!-- PRINCIPAL -->
+<section class="section" id="principal">
+<h2>Principal's Message</h2>
+<div class="card">
+Welcome to Roshan Tara Secondary School. Our mission is to provide quality
+education with discipline, moral values, and modern learning skills to
+prepare students for future success.
+</div>
+</section>
+
+<!-- ADMISSION -->
 <section class="section" id="admission">
 <h2>Admissions Open 2026</h2>
 <div class="admission">
 <h3>Enroll Your Child Today</h3>
-<p>Admissions are open from Playgroup to Secondary Classes.</p>
-<p><strong>Location:</strong> Sachal Goth, Karachi</p>
-<p><strong>Contact:</strong> 03XX-XXXXXXX</p>
+<p>Playgroup to Secondary Classes</p>
+<p>📍 Sachal Goth, Karachi</p>
 </div>
 </section>
 
@@ -221,40 +257,25 @@ prepare our students for future success.
 <h2>School Events</h2>
 
 <div class="event-cover ai">
-<div class="event-title">
-<h3>Artificial Intelligence Awareness Session</h3>
+<div class="event-title">AI Awareness Session</div>
 </div>
-</div>
-<div class="card">
-<p>
-An AI awareness session was organized to introduce students to modern
-technology and future career opportunities.
-</p>
-</div>
+<div class="card">Introducing students to Artificial Intelligence.</div>
 
 <br>
 
 <div class="event-cover ttc">
-<div class="event-title">
-<h3>Teachers Training Program</h3>
+<div class="event-title">Teachers Training Program</div>
 </div>
-</div>
-<div class="card">
-<p>
-A professional training program was conducted to enhance teaching skills
-and classroom management strategies.
-</p>
-</div>
+<div class="card">Professional development for teachers.</div>
 </section>
 
-<!-- CULTURE -->
+<!-- SINDHI CULTURE DAY -->
 <section class="section" id="culture">
 <h2>Sindhi Culture Day – December 2025</h2>
 <div class="card">
 <img id="cultureSlide" src="1.jpg" class="slider-img">
 <p style="margin-top:15px">
-Sindhi Culture Day was celebrated to promote Sindh’s traditions, language,
-and cultural heritage.
+Celebrating Sindh’s rich traditions, language, and heritage.
 </p>
 </div>
 </section>
@@ -273,45 +294,30 @@ and cultural heritage.
 </footer>
 
 <script>
-/* HERO COVER SLIDER */
-let heroImages=[
-    "a.jpeg",
-    "b.jpeg",
-    "d.jpeg",
-    "school2.jpeg"
-];
+/* HERO SLIDER */
+let heroImages=["a.jpeg","b.jpeg","d.jpeg","school2.jpeg"];
 let h=0;
 const hero=document.querySelector(".hero");
 hero.style.backgroundImage=`url(${heroImages[0]})`;
 setInterval(()=>{
-    h=(h+1)%heroImages.length;
-    hero.style.backgroundImage=`url(${heroImages[h]})`;
+  h=(h+1)%heroImages.length;
+  hero.style.backgroundImage=`url(${heroImages[h]})`;
 },3000);
 
 /* CULTURE SLIDER */
 let cultureImages=["1.jpg","3.jpg","4.jpg"];
 let c=0;
 setInterval(()=>{
-    c=(c+1)%cultureImages.length;
-    document.getElementById("cultureSlide").src=cultureImages[c];
+  c=(c+1)%cultureImages.length;
+  document.getElementById("cultureSlide").src=cultureImages[c];
 },3000);
 
-/* GALLERY SLIDER (SAME SCHOOL IMAGES + OTHERS) */
-let galleryImages=[
-    "a.jpeg",
-    "b.jpeg",
-    "d.jpeg",
-    "school2.jpeg",
-    "principal.jpg",
-    "6~2.jpg",
-    "7~2.jpg",
-    "1.jpg",
-    "3.jpg"
-];
+/* GALLERY SLIDER */
+let galleryImages=["a.jpeg","b.jpeg","d.jpeg","school2.jpeg","principal.jpg"];
 let g=0;
 setInterval(()=>{
-    g=(g+1)%galleryImages.length;
-    document.getElementById("gallerySlide").src=galleryImages[g];
+  g=(g+1)%galleryImages.length;
+  document.getElementById("gallerySlide").src=galleryImages[g];
 },3000);
 </script>
 
