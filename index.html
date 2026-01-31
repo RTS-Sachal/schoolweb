@@ -16,13 +16,7 @@
   --dark:#0b132b;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 html{scroll-behavior:smooth}
 body{background:var(--light);color:#333}
 
@@ -57,7 +51,7 @@ nav a{
 }
 nav a:hover{color:var(--secondary)}
 
-/* NOTICE STRIP */
+/* NOTICE */
 .notice-strip{
   background:var(--accent);
   padding:10px 40px;
@@ -109,21 +103,6 @@ nav a:hover{color:var(--secondary)}
   border-radius:18px;
   box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
-
-/* STATS */
-.stats{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-}
-.stat{
-  background:var(--secondary);
-  color:#fff;
-  padding:35px;
-  border-radius:18px;
-  text-align:center;
-}
-.stat h3{font-size:36px;color:var(--accent)}
 
 /* ADMISSION */
 .admission{
@@ -186,6 +165,7 @@ footer{
 <a href="#admission">Admissions</a>
 <a href="#events">Events</a>
 <a href="#culture">Culture</a>
+<a href="#stem">STEM</a>
 <a href="#gallery">Gallery</a>
 </nav>
 </header>
@@ -206,9 +186,9 @@ footer{
 <section class="section" id="academics">
 <h2>Academics</h2>
 <div class="cards">
-<div class="card"><h3>📘 Strong Curriculum</h3><p>Concept-based education following national standards.</p></div>
-<div class="card"><h3>👩‍🏫 Qualified Faculty</h3><p>Experienced teachers using modern teaching methods.</p></div>
-<div class="card"><h3>🧠 Skill Development</h3><p>Critical thinking and problem-solving skills.</p></div>
+<div class="card">📘 Strong Curriculum aligned with national standards.</div>
+<div class="card">👩‍🏫 Qualified and experienced teaching faculty.</div>
+<div class="card">🧠 Focus on conceptual learning and skills.</div>
 </div>
 </section>
 
@@ -216,9 +196,9 @@ footer{
 <section class="section" id="studentlife">
 <h2>Student Life</h2>
 <div class="cards">
-<div class="card"><h3>🎒 Discipline & Values</h3><p>Moral values, respect, and responsibility.</p></div>
-<div class="card"><h3>🏫 Activities</h3><p>Events, competitions, and co-curricular activities.</p></div>
-<div class="card"><h3>🌟 Confidence</h3><p>Leadership and communication skills.</p></div>
+<div class="card">🎒 Discipline and moral values.</div>
+<div class="card">🏫 Cultural and academic activities.</div>
+<div class="card">🌟 Confidence and leadership development.</div>
 </div>
 </section>
 
@@ -226,63 +206,35 @@ footer{
 <section class="section" id="alumni">
 <h2>Alumni</h2>
 <div class="cards">
-<div class="card"><h3>🎓 Proud Graduates</h3><p>Successful former students.</p></div>
-<div class="card"><h3>🌍 Achievements</h3><p>Positive contributions to society.</p></div>
-<div class="card"><h3>🤝 Connection</h3><p>Lifelong bond with the school.</p></div>
+<div class="card">🎓 Proud graduates.</div>
+<div class="card">🌍 Successful careers.</div>
+<div class="card">🤝 Lifelong connection.</div>
 </div>
 </section>
 
 <!-- PRINCIPAL -->
-<section class="section" id="principal">
-<h2>Principal's Message</h2>
+<section class="section">
+<h2>Principal’s Message</h2>
 <div class="card">
-Welcome to Roshan Tara Secondary School. Our mission is to provide quality
-education with discipline, moral values, and modern learning skills to
-prepare students for future success.
+We aim to provide quality education with discipline, values, and modern learning
+to prepare our students for a successful future.
 </div>
 </section>
 
 <!-- ADMISSION -->
 <section class="section" id="admission">
-<h2>Admissions Open 2026</h2>
+<h2>Admissions Open</h2>
 <div class="admission">
 <h3>Enroll Your Child Today</h3>
 <p>Playgroup to Secondary Classes</p>
-<p>📍 Sachal Goth, Karachi</p>
 </div>
 </section>
 
 <!-- EVENTS -->
 <section class="section" id="events">
 <h2>School Events</h2>
-
-<div class="event-cover ai">
-<div class="event-title">AI Awareness Session</div>
-</div>
-<div class="card">Introducing students to Artificial Intelligence.</div>
-
-<br>
-
-<div class="event-cover ttc">
-<div class="event-title">Teachers Training Program</div>
-</div>
-<div class="card">Professional development for teachers.</div>
-</section>
-<!-- STEM MUQABLO SECTION -->
-<section class="section" id="stem">
-<h2>STEM MUQABLO – Gadap School</h2>
-
-<div class="card">
-  <img id="stemSlide" src="f12.jpeg" class="slider-img">
-
-  <p style="margin-top:18px;line-height:1.7">
-    Students of <strong>Roshan Tara Secondary School</strong> proudly participated
-    in the <strong>STEM Muqablo held at Gadap School</strong>.
-    Our students demonstrated excellent skills in science, technology,
-    engineering, and mathematics, securing notable positions and earning
-    appreciation for their innovation, teamwork, and problem-solving abilities.
-  </p>
-</div>
+<div class="event-cover ai"><div class="event-title">AI Awareness Session</div></div>
+<div class="event-cover ttc"><div class="event-title">Teachers Training Program</div></div>
 </section>
 
 <!-- SINDHI CULTURE DAY -->
@@ -290,8 +242,18 @@ prepare students for future success.
 <h2>Sindhi Culture Day – December 2025</h2>
 <div class="card">
 <img id="cultureSlide" src="1.jpg" class="slider-img">
-<p style="margin-top:15px">
-Celebrating Sindh’s rich traditions, language, and heritage.
+<p style="margin-top:15px">Celebrating Sindh’s traditions and heritage.</p>
+</div>
+</section>
+
+<!-- STEM MUQABLO -->
+<section class="section" id="stem">
+<h2>STEM MUQABLO – Gadap School</h2>
+<div class="card">
+<img id="stemSlide" src="f12.jpeg" class="slider-img">
+<p style="margin-top:18px">
+Students of Roshan Tara Secondary School secured positions in STEM Muqablo,
+demonstrating excellence in science, technology, engineering, and mathematics.
 </p>
 </div>
 </section>
@@ -310,56 +272,29 @@ Celebrating Sindh’s rich traditions, language, and heritage.
 </footer>
 
 <script>
-/* HERO SLIDER */
+/* HERO */
 let heroImages=["a.jpeg","b.jpeg","d.jpeg","school2.jpeg"];
 let h=0;
 const hero=document.querySelector(".hero");
 hero.style.backgroundImage=`url(${heroImages[0]})`;
-setInterval(()=>{
-  h=(h+1)%heroImages.length;
-  hero.style.backgroundImage=`url(${heroImages[h]})`;
-},3000);
+setInterval(()=>{h=(h+1)%heroImages.length;hero.style.backgroundImage=`url(${heroImages[h]})`;},3000);
 
-/* CULTURE SLIDER */
+/* CULTURE */
 let cultureImages=["1.jpg","3.jpg","4.jpg"];
 let c=0;
-setInterval(()=>{
-  c=(c+1)%cultureImages.length;
-  document.getElementById("cultureSlide").src=cultureImages[c];
-},3000);
+setInterval(()=>{c=(c+1)%cultureImages.length;document.getElementById("cultureSlide").src=cultureImages[c];},3000);
 
-/* GALLERY SLIDER */
+/* STEM MUQABLO */
+let stemImages=["f12.jpeg","f1.jpeg","f3.jpeg","f4.jpeg","f6.jpeg","f7.jpeg","f8.jpeg","f9.jpeg","f10.jpeg","f11.jpeg"];
+let rest=stemImages.slice(1).sort(()=>Math.random()-0.5);
+stemImages=[stemImages[0],...rest];
+let s=0;
+setInterval(()=>{s=(s+1)%stemImages.length;document.getElementById("stemSlide").src=stemImages[s];},3000);
+
+/* GALLERY */
 let galleryImages=["a.jpeg","b.jpeg","d.jpeg","school2.jpeg","principal.jpg"];
 let g=0;
-setInterval(()=>{
-  g=(g+1)%galleryImages.length;
-  document.getElementById("gallerySlide").src=galleryImages[g];
-},3000);
-  /* STEM MUQABLO SLIDER */
-let stemImages = [
-  "f12.jpeg",   // first image fixed
-  "f1.jpeg",
-  "f3.jpeg",
-  "f4.jpeg",
-  "f6.jpeg",
-  "f7.jpeg",
-  "f8.jpeg",
-  "f9.jpeg",
-  "f10.jpeg",
-  "f11.jpeg"
-];
-
-let stemIndex = 0;
-
-/* shuffle remaining images except first */
-let remainingStem = stemImages.slice(1).sort(() => Math.random() - 0.5);
-stemImages = [stemImages[0], ...remainingStem];
-
-setInterval(() => {
-  stemIndex = (stemIndex + 1) % stemImages.length;
-  document.getElementById("stemSlide").src = stemImages[stemIndex];
-}, 3000);
-
+setInterval(()=>{g=(g+1)%galleryImages.length;document.getElementById("gallerySlide").src=galleryImages[g];},3000);
 </script>
 
 </body>
