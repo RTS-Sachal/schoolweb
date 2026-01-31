@@ -268,6 +268,22 @@ prepare students for future success.
 </div>
 <div class="card">Professional development for teachers.</div>
 </section>
+<!-- STEM MUQABLO SECTION -->
+<section class="section" id="stem">
+<h2>STEM MUQABLO – Gadap School</h2>
+
+<div class="card">
+  <img id="stemSlide" src="f12.jpeg" class="slider-img">
+
+  <p style="margin-top:18px;line-height:1.7">
+    Students of <strong>Roshan Tara Secondary School</strong> proudly participated
+    in the <strong>STEM Muqablo held at Gadap School</strong>.
+    Our students demonstrated excellent skills in science, technology,
+    engineering, and mathematics, securing notable positions and earning
+    appreciation for their innovation, teamwork, and problem-solving abilities.
+  </p>
+</div>
+</section>
 
 <!-- SINDHI CULTURE DAY -->
 <section class="section" id="culture">
@@ -319,6 +335,31 @@ setInterval(()=>{
   g=(g+1)%galleryImages.length;
   document.getElementById("gallerySlide").src=galleryImages[g];
 },3000);
+  /* STEM MUQABLO SLIDER */
+let stemImages = [
+  "f12.jpeg",   // first image fixed
+  "f1.jpeg",
+  "f3.jpeg",
+  "f4.jpeg",
+  "f6.jpeg",
+  "f7.jpeg",
+  "f8.jpeg",
+  "f9.jpeg",
+  "f10.jpeg",
+  "f11.jpeg"
+];
+
+let stemIndex = 0;
+
+/* shuffle remaining images except first */
+let remainingStem = stemImages.slice(1).sort(() => Math.random() - 0.5);
+stemImages = [stemImages[0], ...remainingStem];
+
+setInterval(() => {
+  stemIndex = (stemIndex + 1) % stemImages.length;
+  document.getElementById("stemSlide").src = stemImages[stemIndex];
+}, 3000);
+
 </script>
 
 </body>
