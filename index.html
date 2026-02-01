@@ -145,6 +145,23 @@ footer{
   padding:40px;
   text-align:center;
 }
+
+/* 🔔 ADDED: GOLD NEW BADGE */
+.new-badge{
+  font-size:12px;
+  color:#000;
+  background:#f4b41a;
+  padding:3px 7px;
+  border-radius:6px;
+  margin-left:8px;
+  vertical-align:super;
+  font-weight:700;
+  animation:glow 1.2s infinite alternate;
+}
+@keyframes glow{
+  from{box-shadow:0 0 5px #f4b41a;}
+  to{box-shadow:0 0 14px #ffd166;}
+}
 </style>
 </head>
 
@@ -165,7 +182,7 @@ footer{
 <a href="#admission">Admissions</a>
 <a href="#events">Events</a>
 <a href="#culture">Culture</a>
-<a href="#stem">STEAM MUQABLO (NEW)</a>
+<a href="#stem">STEAM MUQABLO</a>
 <a href="#gallery">Gallery</a>
 </nav>
 </header>
@@ -246,9 +263,12 @@ to prepare our students for a successful future.
 </div>
 </section>
 
-<!-- STEM MUQABLO -->
+<!-- STEAM MUQABLO -->
 <section class="section" id="stem">
-<h2>STEAM MUQABLO – Gadap School</h2>
+<h2>
+  STEAM MUQABLO – Gadap School
+  <sup id="newBadge" class="new-badge">NEW</sup>
+</h2>
 <div class="card">
 <img id="stemSlide" src="f12.jpeg" class="slider-img">
 <p style="margin-top:18px">
@@ -267,13 +287,11 @@ demonstrating excellence in science, technology, engineering, and mathematics.
 </section>
 
 <footer>
-  <p>© 2026 Roshan Tara Secondary School. All Rights Reserved.</p>
-
-  <p>
-    <a href="terms.html" style="color:#fff; text-decoration:underline;">Terms & Conditions</a>
-    &nbsp; | &nbsp;
-    <a href="privacy.html" style="color:#fff; text-decoration:underline;">Privacy Policy</a>
-  </p>
+<p>© 2026 Roshan Tara Secondary School. All Rights Reserved.</p>
+<p>
+<a href="terms.html" style="color:#fff">Terms & Conditions</a> |
+<a href="privacy.html" style="color:#fff">Privacy Policy</a>
+</p>
 </footer>
 
 <script>
@@ -289,7 +307,7 @@ let cultureImages=["1.jpg","3.jpg","4.jpg"];
 let c=0;
 setInterval(()=>{c=(c+1)%cultureImages.length;document.getElementById("cultureSlide").src=cultureImages[c];},3000);
 
-/* STEM MUQABLO */
+/* STEM */
 let stemImages=["f12.jpeg","f1.jpeg","f3.jpeg","f4.jpeg","f6.jpeg","f7.jpeg","f8.jpeg","f9.jpeg","f10.jpeg","f11.jpeg","new1.jpg","new2.jpg"];
 let rest=stemImages.slice(1).sort(()=>Math.random()-0.5);
 stemImages=[stemImages[0],...rest];
@@ -297,9 +315,20 @@ let s=0;
 setInterval(()=>{s=(s+1)%stemImages.length;document.getElementById("stemSlide").src=stemImages[s];},3000);
 
 /* GALLERY */
-let galleryImages=["a.jpeg","b.jpeg","d.jpeg","school2.jpeg","principal.jpg","new2"];
+let galleryImages=["a.jpeg","b.jpeg","d.jpeg","school2.jpeg","principal.jpg","new2.jpg"];
 let g=0;
 setInterval(()=>{g=(g+1)%galleryImages.length;document.getElementById("gallerySlide").src=galleryImages[g];},3000);
+
+/* 🔔 AUTO REMOVE NEW BADGE AFTER 7 DAYS */
+const badge=document.getElementById("newBadge");
+const key="steam_badge_time";
+const now=Date.now();
+const sevenDays=7*24*60*60*1000;
+if(!localStorage.getItem(key)){
+  localStorage.setItem(key,now);
+}else if(now - localStorage.getItem(key) > sevenDays){
+  badge.style.display="none";
+}
 </script>
 
 </body>
