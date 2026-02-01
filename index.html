@@ -7,7 +7,28 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
+<style> 
+  /* STEAM heading wrapper */
+.stem-heading-wrapper{
+  position:relative;
+  display:inline-block;
+}
+
+/* TOP NEW BADGE – fixed position above heading */
+.top-new-badge{
+  position:absolute;
+  top:-28px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#f4b41a;
+  color:#000;
+  font-weight:700;
+  padding:6px 16px;
+  border-radius:20px;
+  animation:glow 1.2s infinite alternate;
+  white-space:nowrap;
+}
+
 :root{
   --primary:#0b3c5d;
   --secondary:#1d70b8;
@@ -291,24 +312,26 @@ to prepare our students for a successful future.
 </section>
 
 <!-- STEAM MUQABLO -->
+<!-- STEAM MUQABLO -->
 <section class="section" id="stem">
 
-<div style="text-align:center">
+<div class="stem-heading-wrapper">
   <span id="topNewBadge" class="top-new-badge">NEW</span>
-</div>
 
-<h2>
-  STEAM MUQABLO – Gadap School
-  <sup id="newBadge" class="new-badge">NEW</sup>
-</h2>
+  <h2>
+    STEAM MUQABLO – Gadap School
+    <sup id="newBadge" class="new-badge">NEW</sup>
+  </h2>
+</div>
 
 <div class="card">
-<img id="stemSlide" src="f12.jpeg" class="slider-img">
-<p style="margin-top:18px">
-Students of Roshan Tara Secondary School secured positions in STEAM Muqablo,
-demonstrating excellence in science, technology, engineering, and mathematics.
-</p>
+  <img id="stemSlide" src="f12.jpeg" class="slider-img">
+  <p style="margin-top:18px">
+    Students of Roshan Tara Secondary School secured positions in STEAM Muqablo,
+    demonstrating excellence in science, technology, engineering, and mathematics.
+  </p>
 </div>
+
 </section>
 
 <!-- GALLERY -->
