@@ -207,6 +207,52 @@ footer{
   from{box-shadow:0 0 6px #f4b41a;}
   to{box-shadow:0 0 18px #ffd166;}
 }
+  /* DROPDOWN MENU */
+.navbar{
+  display:flex;
+  align-items:center;
+}
+
+.dropdown{
+  position:relative;
+  display:inline-block;
+}
+
+.dropbtn{
+  cursor:pointer;
+}
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  top:35px;
+  left:0;
+  background:#fff;
+  min-width:200px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  z-index:999;
+  overflow:hidden;
+}
+
+.dropdown-content a{
+  display:block;
+  padding:12px 16px;
+  color:#0b3c5d;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.dropdown-content a:hover{
+  background:#f4b41a;
+  color:#000;
+}
+
+/* HOVER SUPPORT (DESKTOP) */
+.dropdown:hover .dropdown-content{
+  display:block;
+}
+
 </style>
 </head>
 
@@ -219,20 +265,54 @@ footer{
 
 <header>
 <h1>Roshan Tara Secondary School</h1>
-<nav>
-<a href="#home">Home</a>
-<a href="#academics">Academics</a>
-<a href="#studentlife">Student Life</a>
-<a href="#alumni">Alumni</a>
-<a href="#admission">Admissions</a>
-<a href="#events">Events</a>
-<a href="#culture">Culture</a>
-<a href="#stem">
-  STEAM MUQABLO
-  <sup id="menuNewBadge" class="menu-new">NEW</sup>
-</a>
-<a href="#gallery">Gallery</a>
+<nav class="navbar">
+  <a href="#home">Home</a>
+
+  <div class="dropdown">
+    <a href="#academics" class="dropbtn">Academics ▾</a>
+    <div class="dropdown-content">
+      <a href="#academics">Curriculum</a>
+      <a href="#academics">Faculty</a>
+      <a href="#academics">Examinations</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#studentlife" class="dropbtn">Student Life ▾</a>
+    <div class="dropdown-content">
+      <a href="#studentlife">Activities</a>
+      <a href="#studentlife">Discipline</a>
+      <a href="#culture">Culture Day</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#alumni" class="dropbtn">Alumni ▾</a>
+    <div class="dropdown-content">
+      <a href="#alumni">Our Graduates</a>
+      <a href="#alumni">Success Stories</a>
+      <a href="#alumni">Alumni Network</a>
+    </div>
+  </div>
+
+  <a href="#admission">Admissions</a>
+  <a href="#events">Events</a>
+
+  <div class="dropdown">
+    <a href="#stem" class="dropbtn">
+      STEAM MUQABLO
+      <sup class="menu-new">NEW</sup> ▾
+    </a>
+    <div class="dropdown-content">
+      <a href="#stem">Competition</a>
+      <a href="#stem">Achievements</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+  </div>
+
+  <a href="#gallery">Gallery</a>
 </nav>
+
 </header>
 
 <div class="notice-strip">
