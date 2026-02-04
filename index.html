@@ -273,6 +273,35 @@ footer{
 .dropdown:hover .dropdown-content{
   display:block;
 }
+
+/* ===================== FACULTY ACCORDION ===================== */
+.faculty-card{
+  background:#fff;
+  border-radius:12px;
+  margin-bottom:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+  overflow:hidden;
+}
+.faculty-name{
+  width:100%;
+  text-align:left;
+  padding:18px 25px;
+  background:var(--secondary);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600;
+}
+.faculty-name:hover{
+  background:var(--primary);
+}
+.faculty-details{
+  padding:15px 25px;
+  display:none;
+  background:#f5f7fa;
+  border-top:1px solid #ddd;
+}
 </style>
 </head>
 
@@ -289,7 +318,6 @@ footer{
 <h1>Roshan Tara Secondary School</h1>
 <nav class="navbar">
   <a href="#home">Home</a>
-
   <div class="dropdown">
     <a href="#academics" class="dropbtn">Academics ▾</a>
     <div class="dropdown-content">
@@ -298,7 +326,6 @@ footer{
       <a href="#academics">Examinations</a>
     </div>
   </div>
-
   <div class="dropdown">
     <a href="#studentlife" class="dropbtn">Student Life ▾</a>
     <div class="dropdown-content">
@@ -307,7 +334,6 @@ footer{
       <a href="#culture">Culture Day</a>
     </div>
   </div>
-
   <div class="dropdown">
     <a href="#alumni" class="dropbtn">Alumni ▾</a>
     <div class="dropdown-content">
@@ -316,10 +342,8 @@ footer{
       <a href="#alumni">Alumni Network</a>
     </div>
   </div>
-
   <a href="#admission">Admissions</a>
   <a href="#events">Events</a>
-
   <div class="dropdown">
     <a href="#stem" class="dropbtn">
       STEAM MUQABLO
@@ -331,7 +355,6 @@ footer{
       <a href="#gallery">Gallery</a>
     </div>
   </div>
-
   <a href="#gallery">Gallery</a>
 </nav>
 </header>
@@ -373,6 +396,36 @@ footer{
 <div class="card">👩‍🏫 Qualified and experienced teaching faculty.</div>
 <div class="card">🧠 Focus on conceptual learning and skills.</div>
 </div>
+</section>
+
+<!-- FACULTY -->
+<section class="section" id="faculty">
+<h2>Our Faculty</h2>
+
+<div class="faculty-card">
+  <button class="faculty-name">Mrs Fahim Magsi</button>
+  <div class="faculty-details">
+    <p><strong>Designation:</strong> Principal</p>
+    <p><strong>Qualification:</strong> BSc</p>
+  </div>
+</div>
+
+<div class="faculty-card">
+  <button class="faculty-name">Mr Ghulam Abid</button>
+  <div class="faculty-details">
+    <p><strong>Designation:</strong> Vice Principal</p>
+    <p><strong>Qualification:</strong> M.A Sindhi</p>
+  </div>
+</div>
+
+<div class="faculty-card">
+  <button class="faculty-name">Mr Mohammad Qasim</button>
+  <div class="faculty-details">
+    <p><strong>Designation:</strong>Coordinator</p>
+    <p><strong>Qualification:</strong> M.A and M.Ed</p>
+  </div>
+</div>
+
 </section>
 
 <!-- STUDENT LIFE -->
@@ -502,6 +555,17 @@ if(!localStorage.getItem(key)){
   if(badge) badge.style.display="none";
   if(topBadge) topBadge.style.display="none";
 }
+
+/* FACULTY ACCORDION */
+const facultyButtons = document.querySelectorAll(".faculty-name");
+facultyButtons.forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    const details = btn.nextElementSibling;
+    const isOpen = details.style.display === "block";
+    document.querySelectorAll(".faculty-details").forEach(d => d.style.display = "none");
+    details.style.display = isOpen ? "none" : "block";
+  });
+});
 </script>
 
 </body>
