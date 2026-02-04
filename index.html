@@ -8,13 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style> 
-  /* CHAIRMAN SECTION */
+/* ===================== CHAIRMAN SECTION ===================== */
 .chairman-section{
   max-width:1200px;
   margin:50px auto 0;
   padding:0 30px;
 }
-
 .chairman-box{
   display:flex;
   gap:25px;
@@ -24,8 +23,6 @@
   box-shadow:0 10px 30px rgba(0,0,0,.08);
   align-items:flex-start;
 }
-
-/* Placeholder for photo */
 .chairman-photo{
   width:160px;
   height:180px;
@@ -37,24 +34,20 @@
   font-weight:600;
   color:#777;
 }
-
-/* Message */
 .chairman-content h3{
   color:var(--primary);
   margin-bottom:10px;
 }
-
 .chairman-content p{
   line-height:1.7;
 }
 
-  /* STEAM heading wrapper */
+/* ===================== GENERAL STYLES ===================== */
 .stem-heading-wrapper{
   position:relative;
   display:inline-block;
 }
 
-/* TOP NEW BADGE – fixed position above heading */
 .top-new-badge{
   position:absolute;
   top:-28px;
@@ -183,8 +176,8 @@ nav a:hover{color:var(--secondary)}
   justify-content:center;
   margin-bottom:20px;
 }
-.ai{background:url('https://images.unsplash.com/photo-1677442136019-21780ecad995') center/cover}
-.ttc{background:url('ttc.jpg') center/cover}
+.ai{background:url('https://images.unsplash.com/photo-1677442136019-21780ecad995') center/cover;}
+.ttc{background:url('ttc.jpg') center/cover;}
 .event-title{
   background:rgba(0,0,0,.6);
   color:#fff;
@@ -216,8 +209,6 @@ footer{
   font-weight:700;
   animation:glow 1.2s infinite alternate;
 }
-
-/* Heading badge */
 .new-badge{
   font-size:12px;
   padding:3px 7px;
@@ -225,8 +216,6 @@ footer{
   margin-left:8px;
   vertical-align:super;
 }
-
-/* Menu badge */
 .menu-new{
   font-size:10px;
   padding:2px 6px;
@@ -234,8 +223,6 @@ footer{
   margin-left:4px;
   vertical-align:super;
 }
-
-/* Top section badge */
 .top-new-badge{
   display:inline-block;
   padding:6px 16px;
@@ -247,21 +234,19 @@ footer{
   from{box-shadow:0 0 6px #f4b41a;}
   to{box-shadow:0 0 18px #ffd166;}
 }
-  /* DROPDOWN MENU */
+
+/* DROPDOWN MENU */
 .navbar{
   display:flex;
   align-items:center;
 }
-
 .dropdown{
   position:relative;
   display:inline-block;
 }
-
 .dropbtn{
   cursor:pointer;
 }
-
 .dropdown-content{
   display:none;
   position:absolute;
@@ -274,7 +259,6 @@ footer{
   z-index:999;
   overflow:hidden;
 }
-
 .dropdown-content a{
   display:block;
   padding:12px 16px;
@@ -282,27 +266,25 @@ footer{
   text-decoration:none;
   font-size:14px;
 }
-
 .dropdown-content a:hover{
   background:#f4b41a;
   color:#000;
 }
-
-/* HOVER SUPPORT (DESKTOP) */
 .dropdown:hover .dropdown-content{
   display:block;
 }
-
 </style>
 </head>
 
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
   <div>📍 Sachal Goth, Karachi</div>
   <div>📞 03XX-XXXXXXX</div>
 </div>
 
+<!-- HEADER -->
 <header>
 <h1>Roshan Tara Secondary School</h1>
 <nav class="navbar">
@@ -352,9 +334,9 @@ footer{
 
   <a href="#gallery">Gallery</a>
 </nav>
-
 </header>
 
+<!-- NOTICE -->
 <div class="notice-strip">
 📢 Admissions Open for Academic Session 2026
 </div>
@@ -365,6 +347,22 @@ footer{
 <h2>Roshan Tara Secondary School</h2>
 <p>Sachal Goth, Karachi</p>
 </div>
+</section>
+
+<!-- CHAIRMAN MESSAGE -->
+<section class="chairman-section">
+  <div class="chairman-box">
+    <div class="chairman-photo">Chairman Photo</div>
+    <div class="chairman-content">
+      <h3>Chairman’s Message</h3>
+      <p>
+        (Message will be written here later)  
+        Our mission at Roshan Tara Secondary School is to nurture disciplined,
+        confident, and knowledgeable students who can contribute positively
+        to society and the nation.
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- ACADEMICS -->
@@ -422,7 +420,7 @@ to prepare our students for a successful future.
 <div class="event-cover ttc"><div class="event-title">Teachers Training Program</div></div>
 </section>
 
-<!-- SINDHI CULTURE DAY -->
+<!-- CULTURE -->
 <section class="section" id="culture">
 <h2>Sindhi Culture Day – December 2025</h2>
 <div class="card">
@@ -432,18 +430,14 @@ to prepare our students for a successful future.
 </section>
 
 <!-- STEAM MUQABLO -->
-<!-- STEAM MUQABLO -->
 <section class="section" id="stem">
-
 <div class="stem-heading-wrapper">
   <span id="topNewBadge" class="top-new-badge">NEW</span>
-
   <h2>
     STEAM MUQABLO – Gadap School
     <sup id="newBadge" class="new-badge">NEW</sup>
   </h2>
 </div>
-
 <div class="card">
   <img id="stemSlide" src="f12.jpeg" class="slider-img">
   <p style="margin-top:18px">
@@ -451,7 +445,6 @@ to prepare our students for a successful future.
     demonstrating excellence in science, technology, engineering, and mathematics.
   </p>
 </div>
-
 </section>
 
 <!-- GALLERY -->
@@ -462,6 +455,7 @@ to prepare our students for a successful future.
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Roshan Tara Secondary School. All Rights Reserved.</p>
 <p>
@@ -470,69 +464,43 @@ to prepare our students for a successful future.
 </p>
 </footer>
 
+<!-- ===================== SCRIPTS ===================== -->
 <script>
-/* HERO */
+/* HERO SLIDER */
 let heroImages=["a.jpeg","b.jpeg","d.jpeg","school2.jpeg","new1.jpg","new2.jpg"];
 let h=0;
 const hero=document.querySelector(".hero");
 hero.style.backgroundImage=`url(${heroImages[0]})`;
 setInterval(()=>{h=(h+1)%heroImages.length;hero.style.backgroundImage=`url(${heroImages[h]})`;},3000);
 
-/* CULTURE */
+/* CULTURE SLIDER */
 let cultureImages=["1.jpg","3.jpg","4.jpg"];
 let c=0;
 setInterval(()=>{c=(c+1)%cultureImages.length;document.getElementById("cultureSlide").src=cultureImages[c];},3000);
 
-/* STEM */
+/* STEM SLIDER */
 let stemImages=["f12.jpeg","f1.jpeg","f3.jpeg","f4.jpeg","f6.jpeg","f7.jpeg","f8.jpeg","f9.jpeg","f10.jpeg","f11.jpeg","new1.jpg","new2.jpg"];
 let rest=stemImages.slice(1).sort(()=>Math.random()-0.5);
 stemImages=[stemImages[0],...rest];
 let s=0;
 setInterval(()=>{s=(s+1)%stemImages.length;document.getElementById("stemSlide").src=stemImages[s];},3000);
 
-/* GALLERY */
+/* GALLERY SLIDER */
 let galleryImages=["a.jpeg","b.jpeg","d.jpeg","school2.jpeg","principal.jpg","new2.jpg"];
 let g=0;
 setInterval(()=>{g=(g+1)%galleryImages.length;document.getElementById("gallerySlide").src=galleryImages[g];},3000);
-  <!-- CHAIRMAN MESSAGE -->
-<section class="chairman-section">
-  <div class="chairman-box">
-    
-    <!-- PHOTO (you will replace later) -->
-    <div class="chairman-photo">
-      Chairman Photo
-    </div>
 
-    <!-- MESSAGE -->
-    <div class="chairman-content">
-      <h3>Chairman’s Message</h3>
-      <p>
-        (Message will be written here later)  
-        Our mission at Roshan Tara Secondary School is to nurture disciplined,
-        confident, and knowledgeable students who can contribute positively
-        to society and the nation.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-/* 🔔 AUTO REMOVE ALL NEW BADGES AFTER 7 DAYS */
+/* AUTO REMOVE NEW BADGES AFTER 7 DAYS */
 const badge=document.getElementById("newBadge");
 const topBadge=document.getElementById("topNewBadge");
-const menuBadge=document.getElementById("menuNewBadge");
-
 const key="steam_badge_time";
 const now=Date.now();
 const sevenDays=7*24*60*60*1000;
-
 if(!localStorage.getItem(key)){
   localStorage.setItem(key,now);
 }else if(now - localStorage.getItem(key) > sevenDays){
   if(badge) badge.style.display="none";
   if(topBadge) topBadge.style.display="none";
-  if(menuBadge) menuBadge.style.display="none";
 }
 </script>
 
