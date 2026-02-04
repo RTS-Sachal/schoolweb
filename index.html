@@ -8,6 +8,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style> 
+  /* CHAIRMAN SECTION */
+.chairman-section{
+  max-width:1200px;
+  margin:50px auto 0;
+  padding:0 30px;
+}
+
+.chairman-box{
+  display:flex;
+  gap:25px;
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  align-items:flex-start;
+}
+
+/* Placeholder for photo */
+.chairman-photo{
+  width:160px;
+  height:180px;
+  border-radius:16px;
+  background:#eaeaea;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+  color:#777;
+}
+
+/* Message */
+.chairman-content h3{
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.chairman-content p{
+  line-height:1.7;
+}
+
   /* STEAM heading wrapper */
 .stem-heading-wrapper{
   position:relative;
@@ -454,6 +494,29 @@ setInterval(()=>{s=(s+1)%stemImages.length;document.getElementById("stemSlide").
 let galleryImages=["a.jpeg","b.jpeg","d.jpeg","school2.jpeg","principal.jpg","new2.jpg"];
 let g=0;
 setInterval(()=>{g=(g+1)%galleryImages.length;document.getElementById("gallerySlide").src=galleryImages[g];},3000);
+  <!-- CHAIRMAN MESSAGE -->
+<section class="chairman-section">
+  <div class="chairman-box">
+    
+    <!-- PHOTO (you will replace later) -->
+    <div class="chairman-photo">
+      Chairman Photo
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="chairman-content">
+      <h3>Chairman’s Message</h3>
+      <p>
+        (Message will be written here later)  
+        Our mission at Roshan Tara Secondary School is to nurture disciplined,
+        confident, and knowledgeable students who can contribute positively
+        to society and the nation.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
 /* 🔔 AUTO REMOVE ALL NEW BADGES AFTER 7 DAYS */
 const badge=document.getElementById("newBadge");
