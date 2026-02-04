@@ -434,68 +434,84 @@ footer{
 <div class="card">🧠 Focus on conceptual learning and skills.</div>
 </div>
 </section>
-
 <!-- FACULTY -->
 <section class="section" id="faculty">
 <h2>Our Faculty</h2>
 
+<!-- FOLDER BUTTON -->
+<button id="facultyToggle" class="faculty-name" style="width:100%;border-radius:12px;">
+📁 View All Faculty Members
+</button>
 
-<div class="faculty-card">
-  <button class="faculty-name">Mr Ghulam Abid</button>
-  <div class="faculty-details">
-    <p><strong>Designation:</strong> Vice Principal</p>
-    <p><strong>Qualification:</strong> M.A Sindhi</p>
-  </div>
-</div>
-<div class="faculty-card">
-  <button class="faculty-name">Mr Aijaz Ali</button>
-  <div class="faculty-details">
-    <p><strong>Designation:</strong>Physics Teacher</p>
-    <p><strong>Qualification:</strong> BSc(Genetics)</p>
-  </div>
-</div>
-<div class="faculty-card">
-  <button class="faculty-name">Mr Muhammad Qasim</button>
-  <div class="faculty-details">
-    <p><strong>Designation:</strong>Coordinator</p>
-    <p><strong>Qualification:</strong> M.A and M.Ed</p>
-  </div>
-</div>
-<div class="faculty-card">
-  <button class="faculty-name">Mrs Marvi Abid</button>
-  <div class="faculty-details">
-    <p><strong>Designation:</strong> Sindhi Teacher</p>
-    <p><strong>Qualification:</strong> BA</p>
-  </div>
-</div>
+<!-- ALL FACULTY LIST (HIDDEN INITIALLY) -->
+<div id="facultyFolder" style="display:none;margin-top:20px;">
+
   <div class="faculty-card">
-  <button class="faculty-name">Mrs Sindh Rani</button>
-  <div class="faculty-details">
-    <p><strong>Designation:</strong>Sidhi Teacher</p>
-    <p><strong>Qualification:</strong> M.A Sindhi</p>
+    <div class="faculty-details" style="display:block;">
+      <p><strong>Name:</strong> Mr Ghulam Abid</p>
+      <p><strong>Designation:</strong> Vice Principal</p>
+      <p><strong>Qualification:</strong> M.A Sindhi</p>
+    </div>
   </div>
-</div>
+
   <div class="faculty-card">
-  <button class="faculty-name">Mr Naeem Ahmed Memon</button>
-  <div class="faculty-details">
-    <p><strong>Designation:</strong> Chemistry Teacher</p>
-    <p><strong>Qualification:</strong> Ph.D(Chemistry)</p>
+    <div class="faculty-details" style="display:block;">
+      <p><strong>Name:</strong> Mr Aijaz Ali</p>
+      <p><strong>Designation:</strong> Physics Teacher</p>
+      <p><strong>Qualification:</strong> BSc (Genetics)</p>
+    </div>
   </div>
- </div>  
+
   <div class="faculty-card">
-  <button class="faculty-name">Mr Noor Uddin</button>
-  <div class="faculty-details">
-    <p><strong>Designation:</strong>English Teacher</p>
-    <p><strong>Qualification:</strong> M.B.A English</p>
+    <div class="faculty-details" style="display:block;">
+      <p><strong>Name:</strong> Mr Muhammad Qasim</p>
+      <p><strong>Designation:</strong> Coordinator</p>
+      <p><strong>Qualification:</strong> M.A, M.Ed</p>
+    </div>
   </div>
-</div>
+
   <div class="faculty-card">
-  <button class="faculty-name">Mr Muhammad Javed Ali</button>
-  <div class="faculty-details">
-    <p><strong>Designation:</strong>Islamiat Teacher</p>
-    <p><strong>Qualification:</strong> M.A Islamiat</p>
+    <div class="faculty-details" style="display:block;">
+      <p><strong>Name:</strong> Mrs Marvi Abid</p>
+      <p><strong>Designation:</strong> Sindhi Teacher</p>
+      <p><strong>Qualification:</strong> BA</p>
+    </div>
   </div>
+
+  <div class="faculty-card">
+    <div class="faculty-details" style="display:block;">
+      <p><strong>Name:</strong> Mrs Sindh Rani</p>
+      <p><strong>Designation:</strong> Sindhi Teacher</p>
+      <p><strong>Qualification:</strong> M.A Sindhi</p>
+    </div>
+  </div>
+
+  <div class="faculty-card">
+    <div class="faculty-details" style="display:block;">
+      <p><strong>Name:</strong> Mr Naeem Ahmed Memon</p>
+      <p><strong>Designation:</strong> Chemistry Teacher</p>
+      <p><strong>Qualification:</strong> Ph.D Chemistry</p>
+    </div>
+  </div>
+
+  <div class="faculty-card">
+    <div class="faculty-details" style="display:block;">
+      <p><strong>Name:</strong> Mr Noor Uddin</p>
+      <p><strong>Designation:</strong> English Teacher</p>
+      <p><strong>Qualification:</strong> MBA English</p>
+    </div>
+  </div>
+
+  <div class="faculty-card">
+    <div class="faculty-details" style="display:block;">
+      <p><strong>Name:</strong> Mr Muhammad Javed Ali</p>
+      <p><strong>Designation:</strong> Islamiat Teacher</p>
+      <p><strong>Qualification:</strong> M.A Islamiat</p>
+    </div>
+  </div>
+
 </div>
+</section>
 
 <!-- STUDENT LIFE -->
 <section class="section" id="studentlife">
@@ -625,16 +641,20 @@ if(!localStorage.getItem(key)){
   if(topBadge) topBadge.style.display="none";
 }
 
-/* FACULTY ACCORDION */
-const facultyButtons = document.querySelectorAll(".faculty-name");
-facultyButtons.forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    const details = btn.nextElementSibling;
-    const isOpen = details.style.display === "block";
-    document.querySelectorAll(".faculty-details").forEach(d => d.style.display = "none");
-    details.style.display = isOpen ? "none" : "block";
-  });
+/* FACULTY FOLDER TOGGLE */
+const toggleBtn = document.getElementById("facultyToggle");
+const facultyFolder = document.getElementById("facultyFolder");
+
+toggleBtn.addEventListener("click", () => {
+  if (facultyFolder.style.display === "none") {
+    facultyFolder.style.display = "block";
+    toggleBtn.innerHTML = "📂 Hide Faculty Members";
+  } else {
+    facultyFolder.style.display = "none";
+    toggleBtn.innerHTML = "📁 View All Faculty Members";
+  }
 });
+
 </script>
 
 </body>
