@@ -65,8 +65,7 @@
 }
 
 body{
-  background:linear-gradient(135deg,#eaf4ff,#d6eaff);
-  color:#333;
+  background: linear-gradient(135deg, #0b3c5d, #1d70b8);
 }
 
 /* TOPBAR */
@@ -737,19 +736,6 @@ setInterval(()=>{s=(s+1)%stemImages.length;document.getElementById("stemSlide").
 let galleryImages=["a.jpeg","b.jpeg","d.jpeg","school2.jpeg","principal.jpg","new2.jpg"];
 let g=0;
 setInterval(()=>{g=(g+1)%galleryImages.length;document.getElementById("gallerySlide").src=galleryImages[g];},3000);
-
-/* AUTO REMOVE NEW BADGES AFTER 7 DAYS */
-const badge=document.getElementById("newBadge");
-const topBadge=document.getElementById("topNewBadge");
-const key="steam_badge_time";
-const now=Date.now();
-const sevenDays=7*24*60*60*1000;
-if(!localStorage.getItem(key)){
-  localStorage.setItem(key,now);
-}else if(now - localStorage.getItem(key) > sevenDays){
-  if(badge) badge.style.display="none";
-  if(topBadge) topBadge.style.display="none";
-}
 
 /* FACULTY FOLDER TOGGLE */
 const toggleBtn = document.getElementById("facultyToggle");
