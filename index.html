@@ -514,15 +514,15 @@ footer{
 
 <div class="card program">
   <img src="primary.jpeg">
-  <h3>Primary Section</h3>
+  <h3>Nursery and KG Sections</h3>
   <p>Strong foundation for young learners.</p>
-  <button>500+ Registrations</button><br>
+  <button>400+ Registrations</button><br>
   <p> Morning Session</p>
 </div>
 
 <div class="card program">
   <img src="middle.jpeg">
-  <h3>Middle Section</h3>
+  <h3>Primary & Middle Sections</h3>
   <p>Skill development and growth.</p>
   <button>800+ Registrations</button><br>
   <p>Evening Session</p>
@@ -543,7 +543,46 @@ footer{
 <h2>Academics</h2>
 <div class="cards">
 <div class="card">📘 Strong Curriculum aligned with national standards.</div>
-<div class="card">👩‍🏫 Qualified and experienced teaching faculty.</div>
+<div class="card">
+
+  👩‍🏫 Qualified and experienced teaching faculty.<br><br>
+
+  <!-- TOGGLE BUTTON -->
+  <button id="facultyToggle" style="width:100%;">
+    📁 View All Faculty Members
+  </button>
+
+  <!-- FACULTY LIST -->
+  <div id="facultyFolder" style="display:none;margin-top:15px;">
+
+    <div class="faculty-card">
+      <div class="faculty-details" style="display:block;">
+        <p><strong>Name:</strong> Mr Ghulam Abid</p>
+        <p><strong>Designation:</strong> Vice Principal</p>
+        <p><strong>Qualification:</strong> M.A Sindhi</p>
+      </div>
+    </div>
+
+    <div class="faculty-card">
+      <div class="faculty-details" style="display:block;">
+        <p><strong>Name:</strong> Mr Aijaz Ali</p>
+        <p><strong>Designation:</strong> Physics Teacher</p>
+        <p><strong>Qualification:</strong> BSc (Genetics)</p>
+      </div>
+    </div>
+
+    <div class="faculty-card">
+      <div class="faculty-details" style="display:block;">
+        <p><strong>Name:</strong> Mr Muhammad Qasim</p>
+        <p><strong>Designation:</strong> Coordinator</p>
+        <p><strong>Qualification:</strong> M.A, M.Ed</p>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
 <div class="card">🧠 Focus on conceptual learning and skills.</div>
 </div>
 </section>
@@ -582,8 +621,7 @@ footer{
       <p><strong>Qualification:</strong> M.A, M.Ed</p>
     </div>
   </div>
-
-  <div class="faculty-card">
+<div class="faculty-card">
     <div class="faculty-details" style="display:block;">
       <p><strong>Name:</strong> Mrs Marvi Abid</p>
       <p><strong>Designation:</strong> Sindhi Teacher</p>
@@ -625,6 +663,7 @@ footer{
 
 </div>
 </section>
+  
 
 <!-- STUDENT LIFE -->
 <section class="section" id="studentlife">
